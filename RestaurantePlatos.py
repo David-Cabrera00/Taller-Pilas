@@ -1,7 +1,7 @@
 class RestaurantePlatos:
     def __init__(self, capacidad_limpios=20):
-        self.limpios = []  # pila de platos limpios
-        self.sucios = []   # pila de platos sucios
+        self.limpios = []  
+        self.sucios = []   
         self.capacidad_limpios = capacidad_limpios
 
     def recibir_plato_sucio(self, plato_id: str):
@@ -17,8 +17,8 @@ class RestaurantePlatos:
             print("La pila de platos limpios está llena.")
             return False
 
-        plato = self.sucios.pop()      # LIFO
-        self.limpios.append(plato)     # pasa a limpios
+        plato = self.sucios.pop()      
+        self.limpios.append(plato)     
         print(f"Plato lavado y apilado limpio: {plato}")
         return True
 
@@ -27,7 +27,7 @@ class RestaurantePlatos:
             print("No hay platos limpios para servir.")
             return None
 
-        plato = self.limpios.pop()  # LIFO
+        plato = self.limpios.pop()  
         print(f"Plato servido: {plato}")
         return plato
 
@@ -63,7 +63,7 @@ def menu():
             r.estado()
 
         elif op == "5":
-            print("Bye")
+            print("Adiós")
             break
 
         else:
